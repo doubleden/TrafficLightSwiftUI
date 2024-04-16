@@ -13,6 +13,8 @@ struct ContentView: View {
     }
     
     @State private var currentLight = CurrentLight.red
+    @State private var buttonTitle = "START"
+    
     private let lightIsOn = 1.0
     private let lightIsOff = 0.3
     
@@ -40,7 +42,7 @@ struct ContentView: View {
             Spacer()
             
             Button(action: buttonAction) {
-                Text("START")
+                Text(buttonTitle)
                     .font(.largeTitle)
                     .padding()
             }
@@ -51,7 +53,11 @@ struct ContentView: View {
         .padding()
     }
     
-    func buttonAction() {
+    private func buttonAction() {
+        if buttonTitle == "START" {
+            buttonTitle = "NEXT"
+        }
+        
         switch currentLight {
         case .red:
             currentLight = .yellow
@@ -61,7 +67,6 @@ struct ContentView: View {
             currentLight = .red
         }
     }
-
 }
 
 #Preview {
