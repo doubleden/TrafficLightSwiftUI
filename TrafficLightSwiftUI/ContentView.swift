@@ -49,10 +49,10 @@ struct ContentView: View {
                     .foregroundStyle(.white)
                     .font(.largeTitle)
             }
-            .frame(width: 180, height: 60)
+            .frame(width: 200, height: 60)
             .background(.blue)
-            .clipShape(.buttonBorder)
-            .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 4))
+            .clipShape(.rect(cornerRadius: 20))
+            .overlay(RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 4))
         }
         .padding()
     }
