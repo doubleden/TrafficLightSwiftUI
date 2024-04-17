@@ -8,10 +8,6 @@
 import SwiftUI
 
 struct ContentView: View {
-    private enum CurrentLight {
-        case red, yellow, green
-    }
-    
     @State private var currentLight = CurrentLight.red
     @State private var buttonTitle = "START"
     
@@ -70,6 +66,13 @@ struct ContentView: View {
         case .green:
             currentLight = .red
         }
+    }
+}
+
+// MARK: - Enum
+private extension ContentView {
+    enum CurrentLight {
+        case red, yellow, green
     }
 }
 
