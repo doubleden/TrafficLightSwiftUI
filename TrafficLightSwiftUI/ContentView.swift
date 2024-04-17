@@ -26,29 +26,33 @@ struct ContentView: View {
                     .opacity(currentLight == .red 
                              ? lightIsOn
                              : lightIsOff)
+                    .overlay(Circle().stroke(lineWidth: 4))
                 Circle()
                     .foregroundStyle(.yellow)
                     .opacity(currentLight == .yellow 
                              ? lightIsOn
                              : lightIsOff)
+                    .overlay(Circle().stroke(lineWidth: 4))
                 Circle()
                     .foregroundStyle(.green)
-                    .opacity(currentLight == .green 
+                    .opacity(currentLight == .green
                              ? lightIsOn
                              : lightIsOff)
+                    .overlay(Circle().stroke(lineWidth: 4))
             }
-            .frame(width: 200, height: 500)
+            .frame(width: 200, height: 300)
             
             Spacer()
             
             Button(action: buttonAction) {
                 Text(buttonTitle)
+                    .foregroundStyle(.white)
                     .font(.largeTitle)
-                    .padding()
             }
-            .foregroundStyle(.white)
+            .frame(width: 180, height: 60)
             .background(.blue)
             .clipShape(.buttonBorder)
+            .overlay(RoundedRectangle(cornerRadius: 10).stroke(lineWidth: 4))
         }
         .padding()
     }
