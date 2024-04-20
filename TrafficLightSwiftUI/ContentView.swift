@@ -11,32 +11,22 @@ struct ContentView: View {
     @State private var currentLight = CurrentLight.red
     @State private var buttonTitle = "START"
     
-    private let lightIsOn = 1.0
-    private let lightIsOff = 0.3
-    
     var body: some View {
         VStack {
             VStack {
-                Circle()
-                    .foregroundStyle(.red)
-                    .opacity(currentLight == .red 
-                             ? lightIsOn
-                             : lightIsOff)
-                    .overlay(Circle().stroke(lineWidth: 4))
-                Circle()
-                    .foregroundStyle(.yellow)
-                    .opacity(currentLight == .yellow 
-                             ? lightIsOn
-                             : lightIsOff)
-                    .overlay(Circle().stroke(lineWidth: 4))
-                Circle()
-                    .foregroundStyle(.green)
-                    .opacity(currentLight == .green
-                             ? lightIsOn
-                             : lightIsOff)
-                    .overlay(Circle().stroke(lineWidth: 4))
+                CircleView(
+                    color: .red,
+                    opacity: currentLight == .red ? 1 : 0.3
+                )
+                CircleView(
+                    color: .yellow,
+                    opacity: currentLight == .yellow ? 1 : 0.3
+                )
+                CircleView(
+                    color: .green,
+                    opacity: currentLight == .green ? 1 : 0.3
+                )
             }
-            .frame(width: 200, height: 300)
             
             Spacer()
             
