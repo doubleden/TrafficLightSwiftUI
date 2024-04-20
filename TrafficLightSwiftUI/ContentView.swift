@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var currentLight = CurrentLight.red
+    @State private var currentLight = CurrentLight.off
     @State private var buttonTitle = "START"
     
     var body: some View {
@@ -42,6 +42,8 @@ struct ContentView: View {
         }
         
         switch currentLight {
+        case .off:
+            currentLight = .red
         case .red:
             currentLight = .yellow
         case .yellow:
@@ -55,7 +57,7 @@ struct ContentView: View {
 // MARK: - Enum
 private extension ContentView {
     enum CurrentLight {
-        case red, yellow, green
+        case off, red, yellow, green
     }
 }
 
