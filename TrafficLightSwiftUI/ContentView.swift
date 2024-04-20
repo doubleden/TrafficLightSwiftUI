@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    
     @State private var currentLight = CurrentLight.red
     @State private var buttonTitle = "START"
     
     var body: some View {
         VStack {
-            VStack {
+            VStack(spacing: 15) {
                 CircleView(
                     color: .red,
                     opacity: currentLight == .red ? 1 : 0.3
@@ -30,15 +31,7 @@ struct ContentView: View {
             
             Spacer()
             
-            Button(action: buttonAction) {
-                Text(buttonTitle)
-                    .foregroundStyle(.white)
-                    .font(.largeTitle)
-            }
-            .frame(width: 200, height: 60)
-            .background(.blue)
-            .clipShape(.rect(cornerRadius: 20))
-            .overlay(RoundedRectangle(cornerRadius: 20).stroke(lineWidth: 4))
+            StartButtonView(title: buttonTitle, action: buttonAction)
         }
         .padding()
     }

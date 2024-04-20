@@ -12,6 +12,7 @@
 		059A5E2E2BCF0BA600A8C91D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059A5E2D2BCF0BA600A8C91D /* Assets.xcassets */; };
 		059A5E312BCF0BA600A8C91D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 059A5E302BCF0BA600A8C91D /* Preview Assets.xcassets */; };
 		05C48CF82BD156E300081604 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C48CF72BD156E300081604 /* CircleView.swift */; };
+		05FA02F92BD3ABAE008DF818 /* StartButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FA02F82BD3ABAE008DF818 /* StartButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		059A5E2D2BCF0BA600A8C91D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		059A5E302BCF0BA600A8C91D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		05C48CF72BD156E300081604 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		05FA02F82BD3ABAE008DF818 /* StartButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 				059A5E292BCF0BA500A8C91D /* TrafficLightSwiftUIApp.swift */,
 				059A5E2B2BCF0BA500A8C91D /* ContentView.swift */,
 				05C48CF72BD156E300081604 /* CircleView.swift */,
+				05FA02F82BD3ABAE008DF818 /* StartButtonView.swift */,
 				059A5E2D2BCF0BA600A8C91D /* Assets.xcassets */,
 				059A5E2F2BCF0BA600A8C91D /* Preview Content */,
 			);
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				059A5E2C2BCF0BA500A8C91D /* ContentView.swift in Sources */,
+				05FA02F92BD3ABAE008DF818 /* StartButtonView.swift in Sources */,
 				05C48CF82BD156E300081604 /* CircleView.swift in Sources */,
 				059A5E2A2BCF0BA500A8C91D /* TrafficLightSwiftUIApp.swift in Sources */,
 			);
