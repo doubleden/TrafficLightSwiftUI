@@ -42,14 +42,10 @@ struct ContentView: View {
         }
         
         switch currentLight {
-        case .off:
-            currentLight = .red
-        case .red:
-            currentLight = .yellow
-        case .yellow:
-            currentLight = .green
-        case .green:
-            currentLight = .red
+        case .off: currentLight = .red
+        case .red: currentLight = .yellow
+        case .yellow: currentLight = .green
+        case .green: currentLight = .red
         }
     }
 }
